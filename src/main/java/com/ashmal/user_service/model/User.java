@@ -1,6 +1,7 @@
 package com.ashmal.user_service.model;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data; 
@@ -27,6 +28,8 @@ public class User {
     @NotBlank(message = "Email is mandatory")
     private String email;
 
+    @NotBlank
+    @Schema(description = "Password of the user")
     private String password; // No validation on password for now
 
 //    // Getters and Setters
