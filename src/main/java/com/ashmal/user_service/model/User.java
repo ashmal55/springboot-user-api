@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotBlank;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // this is the key fix
+//    @GeneratedValue(strategy = GenerationType.IDENTITY) // this is the key fix
     private Long id;
 
     @NotBlank(message = "Name is mandatory")
@@ -28,8 +28,7 @@ public class User {
     @NotBlank(message = "Email is mandatory")
     private String email;
 
-    @NotBlank
-    @Schema(description = "Password of the user")
+
     private String password; // No validation on password for now
 
 //    // Getters and Setters

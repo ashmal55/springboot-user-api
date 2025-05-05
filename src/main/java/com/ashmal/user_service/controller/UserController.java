@@ -12,6 +12,7 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // allow all origins (for dev)
 @RestController
 @RequestMapping("/users")
 //@Tag(name = "User API", description = "CRUD operations for users")
